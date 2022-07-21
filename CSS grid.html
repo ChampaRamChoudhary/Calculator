@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+</head>
+<style>
+    .container{
+        display:grid;
+        /* grid-template-columns:200px 200px 200px 400px;
+         */
+         /* grid-template-columns:200px auto 200px; */
+         /* grid-template-columns:1fr 2fr 3fr; */
+         /* grid-template-columns:repeat(5,auto); */
+         grid-template-rows:1fr 1fr 4fr;
+         grid-auto-rows:2fr;
+         grid-gap:2rem;
+         background-color: bisque;
+         height:80vh;
+    }
+    
+    .items{
+        background-color:brown;
+        border:2px solid red;
+        /* height:100px; */
+        /* width:100px; */
+        margin:2px;
+        transition:all 5s ease-out;
+    }
+    .items:hover{
+        transform:scale(0.000000000005);
+        color:blueviolet;
+        background-color:white;
+        /* justify-content: center; */
+        /* align-items:center; */
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="items">This is item-1</div>
+        <div class="items">This is item-2</div>
+        <div class="items">This is item-3</div>
+        <div class="items">This is item-4</div>
+        <div class="items">This is item-5</div>
+        <div class="items">This is item-6</div>
+        <div class="items">This is item-7</div>
+        <div class="items">This is item-8</div>
+        <div class="items">This is item-9</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and text shadow</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        /* background: url('arseny-togulev-kGix6_gPKjI-unsplash.jpg') no-repeat center center/cover;
+        opacity:0.7;
+        z-index:-1;
+        position:relative;
+        top:0px;
+        left:0px;
+        bottom:0px; */
+    }
+    .container::before{ content:"";
+    background: url('arseny-togulev-kGix6_gPKjI-unsplash.jpg') no-repeat center center/cover;
+    opacity:0.8;
+    z-index:-1;
+    position:absolute;
+    
+    top:0px;
+    left:0px;
+    bottom:0px;
+height:100%;
+width: 100%;
+    }
+    .container{
+        display:flex;
+        /* background-color: bisque; */
+    }
+    .card{
+        background-color:aliceblue;
+        border:2px solid peachpuff;
+        justify-content: space-evenly;
+        padding:5px 12px;
+        margin:109px 12px;
+        /* box-shadow:3px 5px yellow; */
+        /* box-shadow:3px 5px 8px yellow;for blur radius */
+        /* box-shadow: 3px 5px 8px 9px yellow;for spread radius */
+
+        box-shadow:-2px -2px 8px yellow;
+        opacity: 0.5;
+        font-weight: bold;
+    }
+    .card h2{
+        text-shadow:2px 3px wheat;
+    }
+    .Box{
+        display:flex;
+        justify-content: space-evenly;
+        font-size:22px;
+        margin:10px;
+        background-color: bisque;
+        border-radius:4px;
+        opacity: 0.5;
+        
+    }
+    .box{
+        text-decoration:none;
+        margin:10px;
+        cursor: pointer;
+        position:relative;
+        /* animation-name:Move;
+        animation-duration:2s;
+        animation-iteration-count: infinite; */
+    }
+    .card{
+        text-decoration:none;
+        margin:10px;
+        cursor: pointer;
+        /* position:relative;
+        animation-name:Move;
+        animation-duration:2s;
+        animation-iteration-count: infinite; */
+    }
+    #card-3{
+        position:relative;
+        animation-name:Move;
+        animation-duration:2s;
+        animation-iteration-count: infinite;
+        
+    }
+    #card-4{
+        position:relative;
+        animation-name:Move1;
+        animation-duration:5s;
+        animation-iteration-count: 5s;
+        animation-fill-mode:forwards;
+        /* animation-timing-function: ease-in; */
+        /* animation-direction:reverse; */
+
+    }
+
+    
+    @keyframes Move{
+        /* from{width:10%;}
+        to{
+            width:80%;
+        }  */
+        0%{
+            Bottom:0px;
+            left:0px;
+
+        }
+        25%{
+            Bottom:25%;
+            left:0px;
+        }
+        50%{
+            Bottom:25%;
+            left:25%;
+        }
+        75%{
+            Bottom:0px;
+            left:25%;
+            }}
+    @keyframes Move1{
+        /* from{width:10%;}
+        to{
+            width:80%;
+        }  */
+        0%{
+            Top:0px;
+            right:0px;
+
+        }
+        25%{
+            Top:25%;
+            right:0px;
+        }
+        50%{
+            Top:25%;
+            right:25%;
+        }
+        75%{
+            Top:0px;
+            right:25%;
+        }
+
+    }
+    #box-5{
+        position:fixed;
+        right:4px;
+    }
+    /* .card{ display:flex;
+        width:20px;
+        height:20px;
+        flex-wrap: wrap;
+
+    } */
+</style>
+<body> <div class="Box"><div class="box" id="box-1"><a href="WWW.Google.com"> Home</a></div>
+    <div class="box" id="box-2"><a href="www.facebook.com">About</a> </div>
+    <div class="box" id="box-3"> <a href="www.youtube.com" >Services</a> </div>
+    <div class="box" id="box-4">Contact Us</div>
+    <div class="box" id="box-5">Register here</div></div>
+    
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>You are in 34 video</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veritatis voluptas natus distinctio aut sint, voluptatibus eligendi accusantium perspiciatis magnam sit veniam assumenda, modi nihil cum dolores repudiandae incidunt soluta eum vel?
+        </div>
+        <div class="card" id="card-2">
+            <h2>You have to watch All video </h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur aliquam reiciendis, commodi quia illum quae corporis deserunt quisquam tempora aut vitae, est laudantium, totam dolores dolor tenetur molestiae saepe recusandae ut fugiat! Soluta, reprehenderit.</p>
+        </div>
+        <div class="card" id="card-3"> 
+            <h2>You have to do coding </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur, suscipit totam repudiandae, aut libero expedita saepe quas impedit harum cumque vitae sapiente eos officia minima iste dolore! Impedit exercitationem vitae sit repudiandae nobis.</p></div>
+        <div class="card" id="card-4"> 
+            <h2>You have to create website</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique atque ex quis minima, veniam recusandae iste autem facilis cupiditate optio blanditiis perferendis cumque assumenda excepturi sequi dolore dolores quos possimus, vero error distinctio unde.</p></div>
+    </div>
+</body>
+</html>
